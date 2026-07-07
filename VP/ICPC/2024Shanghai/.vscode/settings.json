@@ -1,0 +1,14 @@
+{
+  "commentTranslate.hover.enabled": false,
+  "C_Cpp.errorSquiggles": "disabled",
+
+  "c-cpp-compile-run.c-compiler": "/opt/homebrew/bin/gcc-15",
+  "c-cpp-compile-run.cpp-compiler": "/opt/homebrew/bin/g++-15",
+  "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -g -std=c++23",
+  "c-cpp-compile-run.c-flags": "-Wall -Wextra -g -std=c23",
+  "c-cpp-compile-run.output-location": "output",
+  "c-cpp-compile-run.run-in-external-terminal": true,
+  "c-cpp-compile-run.save-before-compile": true,
+  "c-cpp-compile-run.debugger-mimode": "lldb",
+  "c-cpp-compile-run.debugger-path": "/Users/gsh/.vscode/extensions/ms-vscode.cpptools-1.32.2-darwin-arm64/debugAdapters/lldb-mi/bin/lldb-mi"
+}

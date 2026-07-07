@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug C++ (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${fileDirname}/output/${fileBasenameNoExtension}",
+      "cwd": "${fileDirname}",
+      "args": [],
+      "terminal": "external"
+    },
+    {
+      "name": "Debug C++ (cppdbg fallback)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/output/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "miDebuggerPath": "/usr/bin/lldb"
+    }
+  ]
+}
