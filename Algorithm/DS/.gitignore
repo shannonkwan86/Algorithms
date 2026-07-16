@@ -1,3 +1,6 @@
 # Local learn-anything workspace
 .codex/
 .learn/
+
+# Compiled binaries
+*.bin
