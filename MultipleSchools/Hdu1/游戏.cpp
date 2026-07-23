@@ -38,34 +38,36 @@ void solve()
         cout << "YES\n";
         return;
     }
+    bool win;
+
     if (n % 2 == 0)
     {
-        if (pre[mid] >= suf[mid - 1])
+        // n = 2k：先比较前 i 堆与后 i-1 堆，i 从 k 向 2 递减
+        win = true; // 若全部相等，Alice 必胜
+        for (int i = n / 2; i >= 2; --i)
         {
-            cout << "YES\n";
-            return;
+            if (pre[i] != suf[i - 1])
+            {
+                win = (pre[i] > suf[i - 1]);
+                break;
+            }
         }
     }
     else
     {
-        if (pre[mid - 1] > suf[mid - 1])
+        // n = 2k+1：比较前 i 堆与后 i 堆，i 从 k 向 1 递减
+        win = false; // 若全部相等，Alice 必败
+        for (int i = n / 2; i >= 1; --i)
         {
-            cout << "YES\n";
-            return;
-        }
-        else if (pre[mid - 1] == suf[mid - 1])
-        {
-            int cnt = 1;
-            while (pre[cnt] == suf[cnt] && cnt < mid - 1)
-                cnt++;
-            if (pre[cnt] > suf[cnt])
+            if (pre[i] != suf[i])
             {
-                cout << "YES\n";
-                return;
+                win = (pre[i] > suf[i]);
+                break;
             }
         }
     }
-    cout << "NO\n";
+
+    cout << (win ? "YES\n" : "NO\n");
 }
 
 signed main()
